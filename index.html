@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button hover effect</title>
+  </head>
+  <body>
+    <a href="#"> <span>SUBSCRIBE</span></a>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #ffc5fc;
+      }
+
+      a {
+        font-family: "Poppins", sans-serif;
+        padding: 20px 50px;
+        font-size: 30px;
+        letter-spacing: 5px;
+        text-decoration: none;
+        position: relative;
+        background: linear-gradient(#f12ef1, #4b144b);
+        color: rgb(229, 255, 0);
+        transform-style: preserve-3d;
+        transition: ease-in-out 1s;
+        border-radius: 70px;
+      }
+
+      a:hover {
+        transform: rotateX(360deg);
+      }
+
+      a span {
+        display: flex;
+        transform-style: preserve-3d;
+        transform: perspective(100px) translateZ(20px);
+      }
+
+      a::before {
+        content: "";
+        top: 4px;
+        left: 6px;
+        right: 6px;
+        bottom: 4px;
+        position: absolute;
+        border: 3px solid rgb(216, 216, 216);
+        transform-style: preserve-3d;
+        transform: perspective(500px) translateZ(15px);
+        border-radius: 60px;
+      }
+
+      a::after {
+        content: "";
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        position: absolute;
+        border: 3px solid rgb(216, 216, 216);
+        transform-style: preserve-3d;
+        transform: perspective(500px) translateZ(-15px);
+        border-radius: 60px;
+      }
+    </style>
+  </body>
+</html>
